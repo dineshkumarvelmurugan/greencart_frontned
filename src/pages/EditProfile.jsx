@@ -36,7 +36,7 @@ function EditProfile() {
     e.preventDefault();
     try {
       const updatedUser = await axios.put(
-        `http://localhost:5000/api/users/${user._id}`,
+        `https://greencart-backend-2duj.onrender.com/api/users/${user._id}`,
         formData
       );
       localStorage.setItem("user", JSON.stringify(updatedUser.data));

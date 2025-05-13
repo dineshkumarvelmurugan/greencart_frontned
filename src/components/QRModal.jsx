@@ -31,7 +31,7 @@ const QRModal = ({ qrImage, onClose }) => {
         </div>
       </div>
     </div>,
-    document.body // This attaches the modal directly to the body, outside of any containers
+    document.body 
   );
 };
 

@@ -30,7 +30,7 @@ function EditPlant() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/plants/${plant._id}`, form);
+      await axios.put(`https://greencart-backend-2duj.onrender.com/api/plants/${plant._id}`, form);
       setMessage('✅ Plant updated successfully!');
       setTimeout(() => {
         setMessage('');

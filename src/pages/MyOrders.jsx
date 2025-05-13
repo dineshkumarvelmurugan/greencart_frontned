@@ -27,8 +27,8 @@ function MyOrders() {
         }
 
         const endpoint = isAdmin
-          ? 'http://localhost:5000/api/orders'
-          : `http://localhost:5000/api/orders/user/${user.username}`;
+          ? 'https://greencart-backend-2duj.onrender.com/api/orders'
+          : `https://greencart-backend-2duj.onrender.com/api/orders/user/${user.username}`;
 
         const response = await axios.get(endpoint);
         const sortedOrders = response.data.sort(
@@ -50,7 +50,7 @@ function MyOrders() {
 
   const updateStatus = async (orderId, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/orders/update-status/${orderId}`, {
+      await axios.put(`https://greencart-backend-2duj.onrender.com/api/orders/update-status/${orderId}`, {
         status: newStatus,
       });
 
